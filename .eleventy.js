@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
-  
+
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -51,7 +51,7 @@ module.exports = function(eleventyConfig) {
     return minified.code;
   });
 
-  eleventyConfig.addFilter("topThree", function(value) { return value.slice(0,3) });
+  eleventyConfig.addFilter("topThree", function(value) { return value.length > 3 ? value.slice(0,3) : value });
 
   // Minify HTML output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
