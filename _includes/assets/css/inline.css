@@ -38,7 +38,7 @@ body {
 	background-color: var(--background);
 	max-width: 900px;
 	margin: auto;
-	padding: 24px;
+	padding: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -133,16 +133,14 @@ header nav li a {
 	margin: .25em .5em;
 	text-decoration: none;
 	color: var(--primary) !important;
+	font-weight: 300;
 }
 
 
 header nav li a[data-current="current item"] {
-	border-bottom: 1px solid var(--primary);
+	font-weight: 500;
+}
 
-}
-header nav li a:hover {
-	border-bottom: 1px solid var(--primary);
-}
 /* Posts List */
 article {
 	margin-bottom: 1em;
@@ -242,9 +240,29 @@ footer #wcb {
 	color: var(--primary) !important;
 }
 
+.quotes {
+	list-style: none;
+	padding-left: 0;
+}
+
+.quotes li p{
+	margin: 0;
+}
+
+.quotes li h4{
+	margin: 0;
+	font-weight: 300;
+}
+
+.quotes li{
+	margin-bottom: 2rem;
+}
+
+
 #my-beautiful-face {
 	margin: auto;
 	height: 200px;
+	border-radius: 4px;
 }
 
 #wcb_2 {

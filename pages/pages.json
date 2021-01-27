@@ -3,8 +3,18 @@
   "projects": [
     {
       "title": "FundiesCollab",
-      "summary": "Its an Online IDE",
+      "summary": "An online IDE to write and run tiny Racket and Java programs.",
       "url": "https://github.com/rymaju/FundiesCollab"
+    },
+    {
+      "title": "Code4Community",
+      "summary": "A student led organization to create software for non-profits in Boston.",
+      "url": "https://c4cneu.com"
+    },
+    {
+      "title": "LOLCODE",
+      "summary": "An implementation of LOLCODE in Racket.",
+      "url": "https://github.com/rymaju/lolcode"
     }
   ]
 }
