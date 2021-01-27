@@ -1,0 +1,16 @@
+<article{% if post.url == url %} data-current="current item"{% endif %}>
+			<h3>
+				<a href="{{ project.url | url }}">
+					{% if project.title %}
+						{{ project.title }}
+					{% else %}
+						Untitled
+					{% endif %}
+				</a>
+			</h3>
+			{% if project.summary %}
+				<p>
+					{{ project.summary }}
+				</p>
+			{% endif %}
+		</article>

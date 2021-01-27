@@ -3,4 +3,35 @@ layout: layouts/base.njk
 section: home
 ---
 
+
+{% set postslist = collections.post %}
 {{ layoutContent | safe }}
+
+<h1 class="jumbo-text">
+    I do web apps,
+    programming languages,
+    and other computer-y stuff
+</h1>
+
+
+
+<h3 class="section-title">Projects</h3>
+<hr/>
+<section>
+	{% for project in projects | reverse | topThree %}
+		{% include "components/project.njk" %}
+
+	{% endfor %}
+</section>
+
+
+<h3 class="section-title">Latest Posts</h3>
+<hr/>
+<section>
+	{% for post in postslist | reverse | topThree %}
+		{% include "components/postSummary.njk" %}
+
+	{% endfor %}
+    <p><a class="white-link" href="/blog/">Read all posts</a></p>
+</section>
+

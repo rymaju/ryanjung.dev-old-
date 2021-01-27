@@ -1,3 +1,10 @@
 {
-  "layout": "layouts/page.njk"
+  "layout": "layouts/page.njk",
+  "projects": [
+    {
+      "title": "FundiesCollab",
+      "summary": "Its an Online IDE",
+      "url": "https://github.com/rymaju/FundiesCollab"
+    }
+  ]
 }
