@@ -243,6 +243,10 @@ footer #wcb {
 	height: 200px;
 }
 
+#wcb_2 {
+	color: var(--primary)
+}
+
 @media screen and (min-width:768px) {
 	:root {
 		font-size: 1.1rem;
