@@ -3,6 +3,8 @@
 	--primary: #454545 ;
 	--secondary: #dddddd;
 	--background: white;
+	--link: #0077aa;
+	--visited: #85144b;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,6 +12,8 @@
 		--primary: #eee;
 		--secondary: #333;
 		--background: #111;
+		--link: #61c8f4;
+		--visited: #f089eb;
 	}
 }
 
@@ -48,10 +52,10 @@ code {
 }
 
 a[href] {
-	color: #0077aa
+	color: var(--link)
 }
 a[href]:visited {
-	color: #85144b;
+	color:var(--visited)
 }
 
 a[href]:not(:hover) {
@@ -133,11 +137,11 @@ header nav li a {
 
 
 header nav li a[data-current="current item"] {
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid var(--primary);
 
 }
 header nav li a:hover {
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid var(--primary);
 }
 /* Posts List */
 article {
