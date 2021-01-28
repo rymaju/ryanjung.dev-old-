@@ -1,5 +1,5 @@
 <article{% if post.url == url %} data-current="current item"{% endif %}>
-			<h3>
+			<h3 class="summary-title">
 				<a href="{{ project.url | url }}">
 					{% if project.title %}
 						{{ project.title }}
@@ -9,7 +9,7 @@
 				</a>
 			</h3>
 			{% if project.summary %}
-				<p>
+				<p class="subtitle">
 					{{ project.summary }}
 				</p>
 			{% endif %}
