@@ -1,12 +1,12 @@
 ---
-title: Everything you needed to learn in fundies
-date: 2021-01-29
+title: Everything You Needed to Learn in Fundies
+date: 2021-03-09
 author: Ryan Jung
 summary: A breakdown of the most important things I remember and use from Fundies 1 & 2.
 tags:
 ---
 
-I often hear people I know how are taking or have taken fundies complaining about how impractical it is: "Racket is dumb", "Why aren't we starting with ArrayLists", "fundies is just a weed out class" etc.
+I often hear people I know how are taking or have taken fundies complaining about how impractical it is: "Racket is dumb", "Why aren't we starting with ArrayLists", "fundies is a weed out class" etc.
 
 I actually disagree with that mentality since it sort of misses the point of what fundies _is_. You could have looked up a 3 hour tutorial of how to use Python in YouTube for free, but a college level intro to CS sequence should teach you how to **think** in a way that is most conducive to writing well designed code and tackling difficult problems.
 
@@ -43,19 +43,17 @@ Fundies 2:
 
 ### Thinking in Contracts
 
-When I was a fundies 1 TA I would often ask confused students about what their function takes in and what it outputs. In ISL which basically only supports pure functions, it will almost always be true that your output consists of your input in some fashion. Being able to quickly recognize the shape of your input (and invariants/restrictions on that input) is a very useful tool in real life.
+When I was a fundies 1 TA I would often ask confused students about what their function takes in and what it outputs. In ISL which only supports pure functions, it will almost always be true that your output consists of your input in some fashion. Being able to quickly recognize the shape of your input (and invariants/restrictions on that input) is a very useful tool in real life.
 
 Here's an example: I currently work at a large financial company for a co-op and I was tasked to maintain a piece of code a previous co-op had written in Python. Here is a very slightly exaggerated snippet that I, someone with no knowledge of the code, had to understand and maintain.
 
 ```python
-
 def mystery(cwa, s, k):
     total_sum = 0
     for i in s:
         total_sum += cwa['banana'][i]
 
     return total_sum
-
 ```
 
 Now think. What is the type of the input and output? Any Pythonista should get the following:
@@ -82,13 +80,13 @@ In real life you will probably be documenting your functions or using the Wishli
 
 Ignoring that I don't personally like the idea of Test Driven Development, fundies focuses heavily on making sure you write tests to show your code works. In all the intro to CS courses that my friends have taken at "elite" schools like UC Berkeley, Harvard, and Cornell, passing _your own_ tests was never a part of the course. In real life nobody hands you a select test suite for every new feature you're writing. _You_ need to write that yourself.
 
-You would be surprised by how many computer science students think that writing "tests" is just printing a lot of variables and running the code to see if it works.
+You would be surprised by how many computer science students think that writing "tests" is printing a lot of variables and running the code to see if it works.
 
 ### Recursion
 
-If you've taken APCS then you know how badly recursion can be taught. Fundies succeeds in teaching recursion by acting like it's no big deal because it really isn't. When your only way to solve the problem is with recursion and the recursive call is basically given to you by the structure of the input you just need to nod your head and fill in the blanks.
+If you've taken APCS then you know how badly recursion can be taught. Fundies succeeds in teaching recursion by acting like it's no big deal because it really isn't. When your only way to solve the problem is with recursion and the recursive call is given to you by the structure of the input you need to nod your head and fill in the blanks.
 
-Suddenly you just learned how to use recursion to traverse a linked list, or a tree, or any other recursively defined structure.
+Suddenly you learned how to use recursion to traverse a linked list, or a tree, or any other recursively defined structure.
 
 You also learn about accumulators, generative recursion, base cases, and all without all the tears or snarky "why not use a for loop" questions.
 
@@ -96,7 +94,7 @@ It goes without saying that recursion used in real life, although admittedly ite
 
 ### Accumulators
 
-Thinking of an argument to a function being the "computation so far" or information being "passed along" the recursive call is absolutely foreign to a lot of people who were taught recursion incorrectly. Fundies once again makes it one of the only possible ways to solve a myriad of problems in a certain runtime. I believe the idea is first introduced when writing a function to reverse a list in O(n) time. Just knowing how that works is so useful when learning algorithms in later courses or if you go on to learn about continuations and how they work.
+Thinking of an argument to a function being the "computation so far" or information being "passed along" the recursive call is absolutely foreign to a lot of people who were taught recursion incorrectly. Fundies once again makes it one of the only possible ways to solve a myriad of problems in a certain runtime. I believe the idea is first introduced when writing a function to reverse a list in O(n) time. knowing how that works is so useful when learning algorithms in later courses or if you go on to learn about continuations and how they work.
 
 ### Graphs
 
@@ -104,7 +102,7 @@ There are so many real life problems that have been solved by modeling them as a
 
 ### Lambdas
 
-I love how fundies sneakily just shows you first class functions and pretends it's completely normal. Most people have their first experience with lambdas through Python or Javascript. Imagine all your life you've learned that you can only define functions with some special keyword, then one day you're learning about sorting in Python and you see you have to pass in some weird `lambda x: x[0]`. Anonymous functions just aren't normal to a lot of people and it's wonderful that you essentially start off with them in fundies.
+I love how fundies sneakily shows you first class functions and pretends it's completely normal. Most people have their first experience with lambdas through Python or Javascript. Imagine all your life you've learned that you can only define functions with some special keyword, then one day you're learning about sorting in Python and you see you have to pass in some weird `lambda x: x[0]`. Anonymous functions aren't normal to a lot of people and it's wonderful that you essentially start off with them in fundies.
 
 ### Functional goodness
 
@@ -158,11 +156,11 @@ Field of field bugs are really common, and so being taught to avoid FoF access w
 
 ### The expression problem
 
-I love the expression problem, it's just so cool. Having an understanding of the design advantages and limitations of object oriented programming over the functional paradigm we were using before in ISL (or in languages like C) is so cool.
+I love the expression problem, it's so cool. Having an understanding of the design advantages and limitations of object oriented programming over the functional paradigm we were using before in ISL (or in languages like C) is so cool.
 
-In short, if you want to extend some type, the object oriented approach makes it as simple as just adding a new class that extends some interface, while the functional approach is harder because you need to find every function that uses that type to ensure it handles your new extension as well.
+In short, if you want to extend some type, the object oriented approach makes it as simple as adding a new class that extends some interface, while the functional approach is harder because you need to find every function that uses that type to ensure it handles your new extension as well.
 
-On the other hand, if you wanted to add a new function the object oriented programming makes it hard because you're going to need to go through every separate class and add it to each implementation, but if you used functional programming it's as simple as just defining a new function.
+On the other hand, if you wanted to add a new function the object oriented programming makes it hard because you're going to need to go through every separate class and add it to each implementation, but if you used functional programming it's as simple as defining a new function.
 
 There is an inherent tradeoff in code organization here. Note that this isn't an argument about efficiency, this is an argument about **design**.
 
@@ -174,7 +172,7 @@ Equality is a really tricky subject and I love how fundies handles it. You learn
 
 You know, if you're gonna spit on pure functional languages you should at least have good points. Luckily, fundies 2 gives you some pretty good reasons why an immutable world would kind of suck.
 
-Some things just aren't possible without mutation. You cant represent actual cyclic data without mutation or `null`, and some likes like associative arrays, hashsets, and dynamically sized arrays are significantly slower without mutation.
+Some things aren't possible without mutation. You cant represent actual cyclic data without mutation or `null`, and some likes like associative arrays, hashsets, and dynamically sized arrays are significantly slower without mutation.
 
 You need to know this in real life because sometimes you only have immutable data and at that point you need to know what options are available to you.
 
