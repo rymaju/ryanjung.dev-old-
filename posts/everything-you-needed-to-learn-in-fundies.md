@@ -6,44 +6,15 @@ summary: A breakdown of the most important things I remember and use from Fundie
 tags:
 ---
 
-I often hear people I know how are taking or have taken fundies complaining about how impractical it is: "Racket is dumb", "Why aren't we starting with ArrayLists", "fundies is a weed out class" etc.
+I often hear people I know how are taking or have taken fundies complaining about how impractical it is: "Racket is dumb", "Why aren't we starting with ArrayLists", "Fundies is a weed out class" etc.
 
-I actually disagree with that mentality since it sort of misses the point of what fundies _is_. You could have looked up a 3 hour tutorial of how to use Python in YouTube for free, but a college level intro to CS sequence should teach you how to **think** in a way that is most conducive to writing well designed code and tackling difficult problems.
-
-There's a lot of things so buckle up. I hate long blog posts so for each of these points I'm going to explain why I think each is cool/important.
-
-## Table of Contents
-
-Fundies 1:
-
-- Thinking in Contracts
-- The ability to articulate the purpose of functions
-- Test driven development
-- Recursion
-- Accumulators
-- Graphs
-- Lambdas (anonymous functions)
-- Functional goodness
-
-Fundies 2:
-
-- Class hierarchies and organization
-- Single responsibility (Double dispatch)
-- Polymorphism
-- Avoiding field of field hell
-- The expression problem
-- The problem with equality
-- The problem with immutability
-- Pandora\'s Box\<T> (The problem with mutation)
-- Big O
-
----
+I actually disagree with that mentality since it sort of misses the point of what fundies _is_. You could have looked up a 3 hour tutorial of how to use Python on YouTube for free, but a college level intro to CS sequence should teach you how to **think** in a way that is most conducive to writing well designed code and tackling difficult problems.
 
 ## Fundies 1
 
 ### Thinking in Contracts
 
-When I was a fundies 1 TA I would often ask confused students about what their function takes in and what it outputs. In ISL which only supports pure functions, it will almost always be true that your output consists of your input in some fashion. Being able to quickly recognize the shape of your input (and invariants/restrictions on that input) is a very useful tool in real life.
+When I was a fundies 1 TA I would often ask confused students about what their function takes in and what it outputs. In ISL, which only supports pure functions, it will almost always be true that your output consists of your input in some fashion. Being able to quickly recognize the shape of your input (and invariants/restrictions on that input) is a very useful tool in real life.
 
 Here's an example: I currently work at a large financial company for a co-op and I was tasked to maintain a piece of code a previous co-op had written in Python. Here is a very slightly exaggerated snippet that I, someone with no knowledge of the code, had to understand and maintain.
 
@@ -64,13 +35,15 @@ Now think. What is the type of the input and output? Any Pythonista should get t
 
 `k` is never even used, so we have no idea what it is. It's irrelevant to this function.
 
+And of course, we're outputting a Number, but we only know this because `total_sum` was initialized to 0.
+
 We also know that there should be an invariant that `cwa['banana']` exists at all, if it doesn't then we crash when we try to access it.
 
 This was a more trivial example but it demonstrates how important this skill is. Not every language is nice enough to tell you what its inputs and outputs are (looking at you Python and Javascript).
 
 ### The ability to articulate the purpose of functions
 
-One of the best tricks to get your mind around a tough programming problem is to explain how you might solve the problem in English (or whatever your language of thought may be). Talking through it also helps and is humorously called the 'Rubber Ducky' method, because it's a well known fact that all good programmers keep a rubber duck in lieu of real human companionship.
+One of the best tricks to get your mind around a tough programming problem is to explain how you might solve the problem in English (or whatever your language of thought may be). Talking through it also helps and is humorously called the 'rubber duck' method, because it's a well known fact that all good programmers keep a rubber duck in lieu of real human companionship.
 
 The ability to articulate the problem and its solution in a concise few sentences guarantees you have thought out a solution that you actually understand. It also makes sure that the function has a reasonably scoped responsibility. This makes your code easier to read, easier to test, and probably shorter.
 
